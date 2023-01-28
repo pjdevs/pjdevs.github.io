@@ -4,7 +4,11 @@
         <loc>https://pjdevs.github.io/portfolio/</loc>
     </url>
     <url>
-        <loc>https://pjdevs.github.io/portfolio/projects/</loc>
+        <loc>https://pjdevs.github.io/portfolio/project1/</loc>
+        <lastmod>2023-01-01</lastmod>
+    </url>
+    <url>
+        <loc>https://pjdevs.github.io/portfolio/project2/</loc>
         <lastmod>2023-01-01</lastmod>
     </url>
 </urlset>
