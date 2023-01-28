@@ -13,9 +13,6 @@ title = "Pierre-Jean MOREL"
 
 description = "Pierre-Jean MOREL's portfolio"
 
-# Theme to use
-theme = "blow"
-
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -27,6 +24,17 @@ enable_sidebar = false
 enable_adsense = false
 enable_multilingue = false
 #adsense_link = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=myclientid"
+
+# Particle theme
+description = "Some work I did on my own time"
+
+username = "pjdevs"
+user_description = "Graphics programmer enthusiast"
+user_title = "Pierre-Jean Morel"
+email = "my@email.com"
+twitter_username = "pjmorel1"
+github_username = " pjdevs"
+gplus_username = " pjdevs"
 
 [extra.lang]
 items = [
