@@ -31,10 +31,9 @@ description = "Some work I did on my own time"
 username = "pjdevs"
 user_description = "Graphics programmer enthusiast looking for a 2023 summer internship"
 user_title = "Pierre-Jean Morel"
-email = "my@email.com"
-twitter_username = "pjmorel1"
-github_username = " pjdevs"
-gplus_username = " pjdevs"
+user_email = "pjmorel@etu.uqac.ca"
+user_github = " https://github.com/pjdevs"
+user_linkedin = "https://www.linkedin.com/in/pierre-jean-morel-7a99221b6/"
 
 # TODO: put links to tech
 
@@ -48,7 +47,8 @@ title = "Game"
 description = "test tech just to see u know"
 icons = [
     {image = false, name = "devicon-unrealengine-plain colored"},
-    {image = false, name = "devicon-unity-original colored"}
+    {image = false, name = "devicon-unity-original colored"},
+    {image = false, name = "devicon-godot-plain colored"}
 ]
 
 [[extra.techs]]

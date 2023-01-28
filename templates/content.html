@@ -4,31 +4,6 @@
   <p> {{ config.extra.user_description }} </p>
 </div>
   <div class="user">
-    <!-- <div class="tech">
-      <h2>Design</h2>
-      <i class="devicon-html5-plain-wordmark"></i>
-      <i class="devicon-bootstrap-plain-wordmark colored"></i>
-      <i class="devicon-sass-original colored"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
-    </div>
-    <div class="tech">
-      <h2>Code</h2>
-      <i class="devicon-javascript-plain colored"></i>
-      <i class="devicon-react-original-wordmark colored"></i>
-      <i class="devicon-nodejs-plain-wordmark"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
-    </div>
-    <div class="tech">
-      <h2>Tools</h2>
-      <i class="devicon-git-plain"></i>
-      <i class="devicon-gulp-plain colored"></i>
-      <i class="devicon-atom-original-wordmark"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
-    </div> -->
-
     {% for tech in config.extra.techs %}
     <div class="tech">
       <h2>{{ tech.title }}</h2>
@@ -47,34 +22,20 @@
 {% endmacro about %}
 
 {% macro projects() %}
-<div class="user-details">
-  <h1> Featured Projects </h1>
-</div>
-<div class="user-projects">
-  <div class="images-right">
-    <img alt="mountains" src="{{ config.base_url ~ "/img/mountains.jpg" }}" />
-  </div>
-  <div class="contents">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
-  </div>
-</div>
-<div class="user-projects">
-  <div class="images-left">
-    <img alt="mountains" src="{{ config.base_url ~ "/img/skate.jpg" }}" />
-  </div>
-  <div class="contents-right">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
-  </div>
-</div>
+  {% for page in section.pages %}
+    <div class="user-projects">
+      <div class="images-{% if loop.index is not odd %}left{% else %}right{% endif %}">
+        <img alt="mountains" src="{{ config.base_url ~ "/img/" }}{% if loop.index is not odd %}skate.jpg{% else %}mountains.jpg{% endif %}" />
+      </div>
+      <div class="contents{% if loop.index is not odd %}-right{% else %}{% endif %}">
+        <h3> {{ page.title }} </h3>
+        <ul>
+          <li> Featured Skills </li>
+        </ul>
+        <p>{{ page.description }}</p>
+        <a class="project-link" href="{{ config.base_url }}{{page.path}}#content"> See more </a>
+      </div>
+    </div>
+  {% endfor %}
 {% endmacro projects %}
 

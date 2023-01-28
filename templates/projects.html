@@ -1,0 +1,21 @@
+{% import "macros.html" as macros %}
+{% import "content.html" as content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  {{ macros::head() }}
+
+  <body>
+
+      {{ macros::header() }}
+
+      <section id="content">
+        {% block content %}
+        {% endblock content %}
+      </section>
+
+      {{ macros::footer() }}
+      {{ macros::google_analytics() }}
+
+  </body>
