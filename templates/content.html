@@ -1,10 +1,10 @@
 {% macro about() %}
  <div class="user-details">
-  <h1> My Expertise </h1>
+  <h1> About me </h1>
   <p> {{ config.extra.user_description }} </p>
 </div>
   <div class="user">
-    <div class="tech">
+    <!-- <div class="tech">
       <h2>Design</h2>
       <i class="devicon-html5-plain-wordmark"></i>
       <i class="devicon-bootstrap-plain-wordmark colored"></i>
@@ -27,7 +27,22 @@
       <i class="devicon-atom-original-wordmark"></i>
       <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
         Vinyl XOXO lumbersexual</p>
+    </div> -->
+
+    {% for tech in config.extra.techs %}
+    <div class="tech">
+      <h2>{{ tech.title }}</h2>
+      {% for icon in tech.icons %}
+        {% if icon.image %}
+          <img alt="icon" src="{{ config.base_url ~ "/img/"}}{{ icon.name }}" />
+        {% else %}
+          <i class="{{ icon.name }}"></i>
+        {% endif %}
+      {% endfor %}
+      <p>{{ tech.description }}</p>
     </div>
+    {% endfor %}
+
 </div>
 {% endmacro about %}
 

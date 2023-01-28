@@ -29,40 +29,46 @@ enable_multilingue = false
 description = "Some work I did on my own time"
 
 username = "pjdevs"
-user_description = "Graphics programmer enthusiast"
+user_description = "Graphics programmer enthusiast looking for a 2023 summer internship"
 user_title = "Pierre-Jean Morel"
 email = "my@email.com"
 twitter_username = "pjmorel1"
 github_username = " pjdevs"
 gplus_username = " pjdevs"
 
-[extra.lang]
-items = [
-    { lang = "en", links = [
-        { base_url = "/", name = "English" },
-    ] },
+# TODO: put links to tech
+
+[[extra.techs]]
+title = "Graphics"
+description = "test tech just to see u know"
+icons = [{image = false, name = "devicon-opengl-plain colored"}, {image = true, name = "dx11.png"}]
+
+[[extra.techs]]
+title = "Game"
+description = "test tech just to see u know"
+icons = [
+    {image = false, name = "devicon-unrealengine-plain colored"},
+    {image = false, name = "devicon-unity-original colored"}
 ]
 
-[extra.navbar]
-title = "Portfolio"
-items = [
-    { lang = "en", links = [
-        { url = "/", name = "About me" },
-        { url = "/projects", name = "My projects" },
-    ] }
+[[extra.techs]]
+title = "Dev"
+description = "test tech just to see u know"
+icons = [
+    {image = false, name = "devicon-csharp-plain colored"},
+    {image = false, name = "devicon-c-plain colored"},
+    {image = false, name = "devicon-cplusplus-plain colored"},
+    {image = false, name = "devicon-rust-plain colored"},
+    {image = false, name = "devicon-python-plain colored"},
 ]
 
-# Index page
-[extra.index]
-title = "Pierre-Jean MOREL"
-description = "Graphics programming"
-image = "/images/pj.jpg"
-image_alt = "Pierre-Jean MOREL"
-
-[extra.default_author]
-name = "Pierre-Jean MOREL"
-avatar = "/images/pj.jpg"
-avatar_alt = "Pierre-Jean MOREL"
+[[extra.techs]]
+title = "Tools"
+description = "test tech just to see u know"
+icons = [
+    {image = false, name = "devicon-git-plain colored"},
+    {image = true, name = "p4v.png"}
+]
 
 [extra.social]
 github = "https://github.com/pjdevs"
@@ -70,12 +76,3 @@ gitlab = "https://gitlab.com/pjdevs"
 twitter = false
 linkedin = "https://www.linkedin.com/in/pierre-jean-morel-7a99221b6/"
 email = "pjmorel@etu.uqac.ca"
-
-[extra.favicon]
-favicon = "/icons/favicon.ico"
-favicon_16x16 = "/icons/favicon-16x16.png"
-favicon_32x32 = "/icons/favicon-32x32.png"
-apple_touch_icon = "/icons/apple-touch-icon.png"
-android_chrome_512 = "/icons/android-chrome-512x512.png"
-android_chrome_192 = "/icons/android-chrome-192x192.png"
-manifest = "/icons/site.webmanifest"

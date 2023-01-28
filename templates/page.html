@@ -1,6 +1,12 @@
 {% extends "index.html" %}
 
 {% block content %}
-  {{ page.content }}
+  <div>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+    <div>
+      {{ page.content | safe }}
+    </div>
+  </div>
 {% endblock content %}
 

@@ -18,10 +18,10 @@
         {{ content::projects() }}
       </section>
 
-      {% block content %}
-      <p></p>
-      {% endblock content %}
-
+      <section id="content">
+        {% block content %}
+        {% endblock content %}
+      </section>
 
       {{ macros::footer() }}
       {{ macros::google_analytics() }}
