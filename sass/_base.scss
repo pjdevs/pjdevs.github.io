@@ -42,3 +42,8 @@ a img {
 sup, sub {
     line-height: 0;
 }
+
+a, a:link a:visited {
+    font-weight: bold;
+    color: black;
+}

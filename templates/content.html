@@ -1,8 +1,7 @@
 {% macro about() %}
- <div class="user-details">
-  <h1> About me </h1>
-  <p> {{ config.extra.user_description }} </p>
-</div>
+  <div class="user-details">
+    {{ section.content | safe }}
+  </div>
   <div class="user">
     {% for tech in config.extra.techs %}
     <div class="tech">
@@ -25,12 +24,14 @@
   {% for page in section.pages %}
     <div class="user-projects">
       <div class="images-{% if loop.index is not odd %}left{% else %}right{% endif %}">
-        <img alt="mountains" src="{{ config.base_url ~ "/img/" }}{% if loop.index is not odd %}skate.jpg{% else %}mountains.jpg{% endif %}" />
+        <img alt="mountains" src="{{ config.base_url ~ "/img/" }}{{ page.extra.img }}" />
       </div>
       <div class="contents{% if loop.index is not odd %}-right{% else %}{% endif %}">
         <h3> {{ page.title }} </h3>
         <ul>
-          <li> Featured Skills </li>
+          {% for skill in page.extra.skills %}
+            <li> {{ skill }} </li>
+          {% endfor %}
         </ul>
         <p>{{ page.description }}</p>
         <a class="project-link" href="{{ config.base_url }}{{page.path}}#content"> See more </a>

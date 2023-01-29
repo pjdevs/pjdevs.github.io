@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Project 1</title>
-  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr…">
+  <title>D3D11 PBR Renderer</title>
+  <meta name="description" content="A PBR and ECS based renderer made with D3D11 API to understand its basics">
 
   <link rel="stylesheet" href="https://pjdevs.github.io/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -21,6 +21,7 @@
 <div id="particles-js">
   <div class="header">
       <h1>
+        <img class="user-photo" src="https://pjdevs.github.io/img/pj.jpg" alt="User photo">
         <span class="site-title">pjdevs</span>
         <span class="site-description">Pierre-Jean Morel</span>
       </h1>
@@ -44,11 +45,24 @@
       <section id="content">
         
   <div>
-    <h1>Project 1</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h1>D3D11 PBR Renderer</h1>
+    <p>A PBR and ECS based renderer made with D3D11 API to understand its basics</p>
     <div>
-      <h1 id="my-projects">My projects</h1>
-<p>I love some yolo just one</p>
+      <p>This renderer currently support this functionnalities :</p>
+<ul>
+<li>Full modern C++</li>
+<li>Entity-Component-System based architecture with <a href="https://github.com/skypjack/entt">EnTT</a></li>
+<li>Generic asset loading using <a href="https://github.com/assimp/assimp">Assimp</a></li>
+<li>Scene management and GUI parameters using <a href="https://github.com/ocornut/imgui">ImGui</a></li>
+<li>Metal/Roughness physically based rendering</li>
+<li>HDR image based lighting</li>
+</ul>
+<p>Further work is beeing made to support :</p>
+<ul>
+<li>D3D12 rendering to get started with a modern API</li>
+<li>Add SSAO, occlusion culling, frustrum culling</li>
+</ul>
+<p>Github page of the project is <a href="https://github.com/pjdevs/DXTest">here</a></p>
 
     </div>
   </div>

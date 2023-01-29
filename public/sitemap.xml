@@ -4,11 +4,15 @@
         <loc>https://pjdevs.github.io/</loc>
     </url>
     <url>
-        <loc>https://pjdevs.github.io/project1/</loc>
+        <loc>https://pjdevs.github.io/d3d11renderer/</loc>
         <lastmod>2023-01-01</lastmod>
     </url>
     <url>
-        <loc>https://pjdevs.github.io/project2/</loc>
+        <loc>https://pjdevs.github.io/pathtracer/</loc>
+        <lastmod>2023-01-01</lastmod>
+    </url>
+    <url>
+        <loc>https://pjdevs.github.io/renderingengine/</loc>
         <lastmod>2023-01-01</lastmod>
     </url>
 </urlset>

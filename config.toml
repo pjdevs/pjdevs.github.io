@@ -29,7 +29,7 @@ enable_multilingue = false
 description = "Some work I did on my own time"
 
 username = "pjdevs"
-user_description = "Graphics programmer enthusiast looking for a 2023 summer internship"
+user_photo = "pj.jpg"
 user_title = "Pierre-Jean Morel"
 user_email = "pjmorel@etu.uqac.ca"
 user_github = " https://github.com/pjdevs"
@@ -39,12 +39,12 @@ user_linkedin = "https://www.linkedin.com/in/pierre-jean-morel-7a99221b6/"
 
 [[extra.techs]]
 title = "Graphics"
-description = "test tech just to see u know"
+description = "I am familiar with modern OpenGL and Direct 3D 11 and looking forward to learn a new modern API (Vulkan or D3D12)"
 icons = [{image = false, name = "devicon-opengl-plain colored"}, {image = true, name = "dx11.png"}]
 
 [[extra.techs]]
 title = "Game"
-description = "test tech just to see u know"
+description = "Side projects and courses at UQAC, Chicoutimi, Québec, Canada gave me solid skills in both Unreal Engine 5.1 and Unity"
 icons = [
     {image = false, name = "devicon-unrealengine-plain colored"},
     {image = false, name = "devicon-unity-original colored"},
@@ -53,7 +53,7 @@ icons = [
 
 [[extra.techs]]
 title = "Dev"
-description = "test tech just to see u know"
+description = "Most of my game development work was done in C++ and C#. I had to work or do academical projects with C and Python. I am a Rust lover !"
 icons = [
     {image = false, name = "devicon-csharp-plain colored"},
     {image = false, name = "devicon-c-plain colored"},
@@ -64,7 +64,7 @@ icons = [
 
 [[extra.techs]]
 title = "Tools"
-description = "test tech just to see u know"
+description = "All my academical and professional projects in teams were supported by either Git or Perforce."
 icons = [
     {image = false, name = "devicon-git-plain colored"},
     {image = true, name = "p4v.png"}
