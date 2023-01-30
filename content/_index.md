@@ -1,6 +1,8 @@
 +++
 +++
 
+<span style="color:red">***WARNING: this website is under construction !***</span>
+
 # About me
 
 ***Graphics and game programming** enthusiast looking for a **2023 summer internship**.*
