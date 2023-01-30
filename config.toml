@@ -23,7 +23,7 @@ enable_search = false
 enable_sidebar = false
 enable_adsense = false
 enable_multilingue = false
-#adsense_link = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=myclientid"
+google_analytics = "G-2Z1GNLBD1F" 
 
 # Particle theme
 description = "Some work I did on my own time"
