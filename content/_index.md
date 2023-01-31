@@ -17,4 +17,4 @@ I am studying game programming <a href="https://uqac.ca/" target="_blank">UQAC, 
 
 I am passionate of **graphics programming** and everything related to **video game development**.
 I enjoy discovering new technologies or new techniques of rendering.
-Moreover, I really like the research process as I've already colaborated to write a research paper in Combinatorics which was published in the [JIS](https://cs.uwaterloo.ca/journals/JIS/VOL25/Bonichon/bonichon3.html).
+Moreover, I really like the research process as I've already colaborated to write a research paper in Combinatorics which was published in the <a href="https://cs.uwaterloo.ca/journals/JIS/VOL25/Bonichon/bonichon3.html" target="_blank">JIS</a>.
