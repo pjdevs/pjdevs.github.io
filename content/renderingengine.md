@@ -4,6 +4,7 @@ date = "2023-01-01"
 description = "A complete rework from scratch of a rendering engine in C#/OpenGL/WPF in a CAD software for pools during an internship"
 
 [extra]
+index = 1
 img = "rendering_sunset.png"
 skills = ["OpenGL", "GLSL", "C#"]
 +++

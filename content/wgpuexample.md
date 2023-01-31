@@ -4,7 +4,8 @@ date = "2023-01-01"
 description = "A test of WGPU with Rust"
 
 [extra]
-img = "rendering_sunset.png"
+index = 5
+img = "wgpu.png"
 skills = ["WGPU", "WGSL", "Rust"]
 +++
 

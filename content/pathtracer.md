@@ -4,7 +4,8 @@ date = "2023-01-01"
 description = "A basic but operationnal path tracer made to explore this new concept"
 
 [extra]
-img = "rendering_sunset.png"
+index = 4
+img = "blank.png"
 skills = ["OpenGL", "C++"]
 +++
     

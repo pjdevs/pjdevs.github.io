@@ -23,7 +23,7 @@
 {% endmacro about %}
 
 {% macro projects() %}
-  {% for page in section.pages %}
+  {% for page in section.pages | sort(attribute="extra.index") %}
     <div class="user-projects">
       <div class="images-{% if loop.index is not odd %}left{% else %}right{% endif %}">
         <img alt="mountains" src="{{ config.base_url ~ "/img/" }}{{ page.extra.img }}" />
