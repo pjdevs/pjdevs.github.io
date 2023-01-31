@@ -6,13 +6,15 @@
     {% for tech in config.extra.techs %}
     <div class="tech">
       <h2>{{ tech.title }}</h2>
-      {% for icon in tech.icons %}
-        {% if icon.image %}
-          <img alt="icon" src="{{ config.base_url ~ "/img/"}}{{ icon.name }}" />
-        {% else %}
-          <i class="{{ icon.name }}"></i>
-        {% endif %}
-      {% endfor %}
+      <div class="tech-icons">
+        {% for icon in tech.icons %}
+          {% if icon.image %}
+            <img alt="icon" src="{{ config.base_url ~ "/img/"}}{{ icon.name }}" />
+          {% else %}
+            <i class="{{ icon.name }}"></i>
+          {% endif %}
+        {% endfor %}
+      </div>
       <p>{{ tech.description }}</p>
     </div>
     {% endfor %}

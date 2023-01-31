@@ -29,11 +29,14 @@ google_analytics = "G-2Z1GNLBD1F"
 description = "Some work I did on my own time"
 
 username = "pjdevs"
-user_photo = "pj.jpg"
+user_photo = "img/pj.jpg"
 user_title = "Pierre-Jean Morel"
 user_email = "pjmorel@etu.uqac.ca"
 user_github = " https://github.com/pjdevs"
 user_linkedin = "https://www.linkedin.com/in/pierre-jean-morel-7a99221b6/"
+user_resume = "documents/resume.pdf"
+
+not_found_msg = "Sorry, this page does not exist :("
 
 # TODO: put links to tech
 

@@ -9,19 +9,10 @@
 
   <body>
 
-      {{ macros::header(home=true) }}
-
-      <section id="about">
-        {{ content::about() }}
-      </section>
-
-      <section id="projects">
-        {{ content::projects() }}
-      </section>
+      {{ macros::header(home=false) }}
 
       <section id="content">
-        {% block content %}
-        {% endblock content %}
+        <h1>{{ config.extra.not_found_msg }}</h1>
       </section>
 
       {{ macros::footer() }}
