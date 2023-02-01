@@ -5,7 +5,7 @@ description = "A PBR and ECS based renderer made with D3D11 API to understand it
 
 [extra]
 index = 0
-img = "blank.png"
+img = "renderer.png"
 skills = ["D3D11", "C++"]
 +++
 
