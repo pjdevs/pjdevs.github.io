@@ -1,7 +1,7 @@
 +++
 title = "ALKA"
 date = "2023-01-01"
-description = "A 3D online co-op PvE FPS made in collaboration with multiple universities in Québec"
+description = "Gameplay and network programmer on an online co-op PvE FPS made in collaboration with multiple universities in Québec"
 
 [extra]
 index = 0
@@ -13,12 +13,12 @@ skills = ["Unreal Engine", "C++"]
 
 ## Description
 
-ALKA is an online multiplayer game where 2 to 4 players take control of armed drones whose duty is to eliminate an infection spreading in a bunger after the humanity has disappeared. They will have to destroyed nodes of infection which are protected by various enemies.
+ALKA is an online multiplayer game where 2 to 4 players take control of armed drones whose duty is to eliminate an infection spreading in a bunger after the humanity has disappeared. They will have to destroy nodes of infection which are protected by various enemies.
 
 ## Project overview
 
 ALKA began its development during the winter 2022 semester. Students from UQAC, NAD-UQAC and UdeM started to develop the first prototype of the game.
-Then, our team continued the developement during fall, winter and spring 2022.
+Then, our team continued the development during fall, winter and spring 2022.
 <a href="https://uqac.itch.io/alka" target="_blank">See first prototype</a>
 
 Our team worked on the project during two quarters. The first was a pre-production phase and the second a production phase.
@@ -28,12 +28,12 @@ We had an Agile workflow with Sprint Reviews and Build Reviews once a week and e
 
 ## My contribution to the project
 
-I spent the main part of the development working on the new system currency system *"Creep Units"* in tandem with the new store *"Alchemy Lab"*
+I spent the main part of the development working on the new currency system *"Creep Units"* in tandem with the new store *"Alchemy Lab"*
 which will let players revive others and buy weapons and abilities.
 
 ### Currency system
 
-A new featured was designed by our team during the prototyping phase. Players should be able to loot currency on the existing and future ennemies in the game, grab them, drop it and use it in the Lab. Players can carry one type at a time among 4 planned types of currency (Fire, Water, Wind, Earth) like a tank/stack.
+A new feature was designed by our team during the prototyping phase. Players should be able to loot currency on the existing and future enemies in the game, grab them, drop it and use it in the Lab. Players can carry one type at a time among 4 planned types of currency (Fire, Water, Wind, Earth) like a tank/stack.
 
 #### Loot Component
 
@@ -43,7 +43,7 @@ Given a list of *loot entries*, a probality and a radius it simply spawns all ac
 
 ![Creep Units](/img/alka_loot_code.png)
 
-In our game, this component was placed inside the <span class="code">MasterEnnemy</span> class, and the <span class="code">Loot</span> was triggered on destroy of the Actor. This way, all existing and future ennemies could directly drop the currencies.
+In our game, this component was placed inside the <span class="code">MasterEnnemy</span> class, and the <span class="code">Loot</span> was triggered on destroy of the Actor. This way, all existing and future enemies could directly drop the currencies.
 
 #### Creep Unit
 
@@ -59,11 +59,11 @@ A debug tool was also programmed to let artists and designers spawn as many curr
 
 The PlayerState present in Unreal framework was largely used to keep track of each creep unit count, the current type carried and the maximum amount that can be carried.
 This is where each event occured when the current type or the stack count changed to update all concerned UI.
-This properties was replicated with *OnRepNotify* behavior of Unreal in C++ allowing to trigger events client side after replication.
+These properties were replicated with *OnRepNotify* behavior of Unreal in C++ allowing to trigger events client side after replication.
 
 ### Integration into the Lab UI and player HUD
 
-After adding this features, I had to integrate them into the already made UI of the lab and of the HUD.
+After adding these features, I had to integrate them into the already made UI of the lab and of the HUD.
 Thanks to all the events it was easy to sync the UI according to all players' state.
 
 First the Lab :
@@ -86,7 +86,7 @@ This project was full of challenges which allowed me to increase my skills!
 
 ALKA was my first multiplayer game programming experience and my first Unreal Engine project at the same time. I had to learn the basics of the engine in a short pre-production period to be ready and efficient during the production. Moreover, programming a multiplayer game increases the complexity of development. As a first time, it was a challenge to have the Client/Server/RPC mindset. This was very instructive and I learned various things on Unreal Engine and networking inside of it.
 
-In particular, as part of my work, I had to make sure that every spawning, dropping, inventory like states (how much currencies in the lab? how much on each player?) and events (my currency count changed, I dropped currencies inside the lab, ...) were properly replicated across all client and on the coherent one the server. Indeed, P2P was even harder because you have to keep in mind that the server is also a client/player.
+In particular, as part of my work, I had to make sure that every spawning, dropping, inventory like states (how much currencies in the lab? how much on each player?) and events (my currency count changed, I dropped currencies inside the lab, ...) were properly replicated across all client and in a coherent state one the server. Indeed, P2P was even harder because you have to keep in mind that the server is also a client/player.
 
 Eventually, I am now confident about getting involved in a new mutliplayer project if needed!
 
@@ -94,7 +94,7 @@ Eventually, I am now confident about getting involved in a new mutliplayer proje
 
 When we joined the team, the project was already in a decent state. Moreover, all programmers (except one) and artists were new to the project.
 This led to a certain adaptation time to a consequent C++ code base and to the Agile worlfow with this particular team.
-I had to analyze all part of the code (C++ and some Blueprints) to ensure I understood the code and I could  makes required changes without breaking any existing behavior.
+I had to analyze all part of the code (C++ and some Blueprints) to ensure I understood the code and I could make required changes without breaking any existing behavior.
 
 ### Collaboration with multiple universities
 
