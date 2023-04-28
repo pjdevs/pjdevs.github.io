@@ -4,7 +4,7 @@ date = "2023-01-01"
 description = "A CPU and GPU optimization inside EasyPAP made in C with OpenMP and OpenCL in parallel computing course at ENSEIRB-MATMECA"
 
 [extra]
-index = 2
+index = 3
 img = "gol.png"
 skills = ["C", "OpenMP", "OpenCL"]
 +++

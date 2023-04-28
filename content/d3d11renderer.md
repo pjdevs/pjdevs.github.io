@@ -4,7 +4,7 @@ date = "2023-01-01"
 description = "A PBR and ECS based renderer made with D3D11 API to understand its basics"
 
 [extra]
-index = 0
+index = 1
 img = "renderer.png"
 skills = ["D3D11", "C++"]
 +++

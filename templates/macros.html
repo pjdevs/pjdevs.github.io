@@ -10,13 +10,15 @@
 
   <link rel="stylesheet" href="{{ config.base_url ~ "/main.css" }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="icon" type="image/x-icon" href="{{ config.base_url ~ "/favicon.ico" }}">
 </head>
 {% endmacro head %}
 
 {% macro footer() %}
 <footer class="footer">
     <p>&copy; {{ config.extra.username }}</p>
-    <p>Ported to Zola with <span class="love">❤</span> by <a href="https://github.com/svavs">Silvano Sallese</a> (original by <a href="https://github.com/nrandecker">Nathan Randecker</a>)</p>
+    <p>Ported to Zola with <span class="love">❤</span> by <a href="https://github.com/svavs" target="_blank">Silvano Sallese</a> and heavily modified by Pierre-Jean Morel (original by <a href="https://github.com/nrandecker">Nathan Randecker</a>)</p>
+    <p>Icon by <a href="https://www.flaticon.com/authors/surang" target="_blank">surang</a></p>
 </footer>
 <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="{{ config.base_url ~ "/js/sweet-scroll.min.js" }}"></script>
