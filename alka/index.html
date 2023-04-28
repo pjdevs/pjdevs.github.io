@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>ALKA</title>
-  <meta name="description" content="A 3D online co-op PvE FPS made in collaboration with multiple universities in Québec">
+  <meta name="description" content="Gameplay and network programmer on an online co-op PvE FPS made in collaboration with multiple universities in Québec">
 
   <link rel="stylesheet" href="https://pjdevs.github.io/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -62,28 +62,28 @@
         
   <div>
     <h1>ALKA</h1>
-    <p>A 3D online co-op PvE FPS made in collaboration with multiple universities in Québec</p>
+    <p>Gameplay and network programmer on an online co-op PvE FPS made in collaboration with multiple universities in Québec</p>
     <div>
       <iframe src="https://www.youtube.com/embed/_pX1EpqLWC4" title="Alka" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <h2 id="description">Description</h2>
-<p>ALKA is an online multiplayer game where 2 to 4 players take control of armed drones whose duty is to eliminate an infection spreading in a bunger after the humanity has disappeared. They will have to destroyed nodes of infection which are protected by various enemies.</p>
+<p>ALKA is an online multiplayer game where 2 to 4 players take control of armed drones whose duty is to eliminate an infection spreading in a bunger after the humanity has disappeared. They will have to destroy nodes of infection which are protected by various enemies.</p>
 <h2 id="project-overview">Project overview</h2>
 <p>ALKA began its development during the winter 2022 semester. Students from UQAC, NAD-UQAC and UdeM started to develop the first prototype of the game.
-Then, our team continued the developement during fall, winter and spring 2022.
+Then, our team continued the development during fall, winter and spring 2022.
 <a href="https://uqac.itch.io/alka" target="_blank">See first prototype</a></p>
 <p>Our team worked on the project during two quarters. The first was a pre-production phase and the second a production phase.
 We were in an every-day collaboration with the artists during the production phase after some prototyping.</p>
 <p>We had an Agile workflow with Sprint Reviews and Build Reviews once a week and every two weeks. Moreover, tasks were distributed with tickets on a Kanban like board. Each task had <span style="color:gold">Gold</span>, <span style="color:silver">Silver</span>, <span style="color:maroon">Bronze</span> steps to validate a certain level of <em>polish</em> for each one.</p>
 <h2 id="my-contribution-to-the-project">My contribution to the project</h2>
-<p>I spent the main part of the development working on the new system currency system <em>&quot;Creep Units&quot;</em> in tandem with the new store <em>&quot;Alchemy Lab&quot;</em>
+<p>I spent the main part of the development working on the new currency system <em>&quot;Creep Units&quot;</em> in tandem with the new store <em>&quot;Alchemy Lab&quot;</em>
 which will let players revive others and buy weapons and abilities.</p>
 <h3 id="currency-system">Currency system</h3>
-<p>A new featured was designed by our team during the prototyping phase. Players should be able to loot currency on the existing and future ennemies in the game, grab them, drop it and use it in the Lab. Players can carry one type at a time among 4 planned types of currency (Fire, Water, Wind, Earth) like a tank/stack.</p>
+<p>A new feature was designed by our team during the prototyping phase. Players should be able to loot currency on the existing and future enemies in the game, grab them, drop it and use it in the Lab. Players can carry one type at a time among 4 planned types of currency (Fire, Water, Wind, Earth) like a tank/stack.</p>
 <h4 id="loot-component">Loot Component</h4>
 <p>This Actor Component is a generic piece of code to loot/spawn anything. It is designed to be generic and not specific to currencies, that way future temas will be able to reuse it if needed. It provides a simple functionnality <span class="code">Loot</span> which owners of the component are responsible to call <strong>server side</strong>.</p>
 <p>Given a list of <em>loot entries</em>, a probality and a radius it simply spawns all actors around the owner.</p>
 <p><img src="/img/alka_loot_code.png" alt="Creep Units" /></p>
-<p>In our game, this component was placed inside the <span class="code">MasterEnnemy</span> class, and the <span class="code">Loot</span> was triggered on destroy of the Actor. This way, all existing and future ennemies could directly drop the currencies.</p>
+<p>In our game, this component was placed inside the <span class="code">MasterEnnemy</span> class, and the <span class="code">Loot</span> was triggered on destroy of the Actor. This way, all existing and future enemies could directly drop the currencies.</p>
 <h4 id="creep-unit">Creep Unit</h4>
 <p>A base <span class="code">CreepUnit</span> Actor was created to put inside the LootComponent. It contained all common behavior to all currencies (spawn on the ground, grabbed by the player, lifetime, ...) and then had been <em>subclassed</em> to create all creep unit types.</p>
 <p>The main thing to keep in mind here is that all <em>collisions</em> checks, <em>spawns</em>, <em>destroys</em>, and <em>changes</em> in the PlayerState (number of creep unit of each types) had to be done on the <strong>server</strong> and then be replicated to avoid cheating and ensure a good networking.</p>
@@ -92,9 +92,9 @@ which will let players revive others and buy weapons and abilities.</p>
 <h3 id="unreal-player-state">Unreal Player State</h3>
 <p>The PlayerState present in Unreal framework was largely used to keep track of each creep unit count, the current type carried and the maximum amount that can be carried.
 This is where each event occured when the current type or the stack count changed to update all concerned UI.
-This properties was replicated with <em>OnRepNotify</em> behavior of Unreal in C++ allowing to trigger events client side after replication.</p>
+These properties were replicated with <em>OnRepNotify</em> behavior of Unreal in C++ allowing to trigger events client side after replication.</p>
 <h3 id="integration-into-the-lab-ui-and-player-hud">Integration into the Lab UI and player HUD</h3>
-<p>After adding this features, I had to integrate them into the already made UI of the lab and of the HUD.
+<p>After adding these features, I had to integrate them into the already made UI of the lab and of the HUD.
 Thanks to all the events it was easy to sync the UI according to all players' state.</p>
 <p>First the Lab :</p>
 <p><img src="/img/alka_lab.png" alt="Alchemy Lab" /></p>
@@ -106,12 +106,12 @@ Thanks to all the events it was easy to sync the UI according to all players' st
 <p>This project was full of challenges which allowed me to increase my skills!</p>
 <h3 id="online-multiplayer-game">Online multiplayer game</h3>
 <p>ALKA was my first multiplayer game programming experience and my first Unreal Engine project at the same time. I had to learn the basics of the engine in a short pre-production period to be ready and efficient during the production. Moreover, programming a multiplayer game increases the complexity of development. As a first time, it was a challenge to have the Client/Server/RPC mindset. This was very instructive and I learned various things on Unreal Engine and networking inside of it.</p>
-<p>In particular, as part of my work, I had to make sure that every spawning, dropping, inventory like states (how much currencies in the lab? how much on each player?) and events (my currency count changed, I dropped currencies inside the lab, ...) were properly replicated across all client and on the coherent one the server. Indeed, P2P was even harder because you have to keep in mind that the server is also a client/player.</p>
+<p>In particular, as part of my work, I had to make sure that every spawning, dropping, inventory like states (how much currencies in the lab? how much on each player?) and events (my currency count changed, I dropped currencies inside the lab, ...) were properly replicated across all client and in a coherent state one the server. Indeed, P2P was even harder because you have to keep in mind that the server is also a client/player.</p>
 <p>Eventually, I am now confident about getting involved in a new mutliplayer project if needed!</p>
 <h3 id="adaptation-to-a-project-already-started-with-a-new-team">Adaptation to a project already started with a new team</h3>
 <p>When we joined the team, the project was already in a decent state. Moreover, all programmers (except one) and artists were new to the project.
 This led to a certain adaptation time to a consequent C++ code base and to the Agile worlfow with this particular team.
-I had to analyze all part of the code (C++ and some Blueprints) to ensure I understood the code and I could  makes required changes without breaking any existing behavior.</p>
+I had to analyze all part of the code (C++ and some Blueprints) to ensure I understood the code and I could make required changes without breaking any existing behavior.</p>
 <h3 id="collaboration-with-multiple-universities">Collaboration with multiple universities</h3>
 <p>ALKA is a game developed in collaboration with 3 universities (programmers, artists/designers, sound designers). This collaboration brings couple difficulties, such as the distance which leads in a less easy communication. The team managed to communicate efficiently but it is always harder to share ideas an opinions this way than in a face-to-face meeting.</p>
 <h2 id="credits">Credits</h2>
