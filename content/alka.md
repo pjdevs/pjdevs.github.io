@@ -33,15 +33,50 @@ which will let players revive others and buy weapons and abilities.
 
 ### Currency system
 
+A new featured was designed by our team during the prototyping phase. Players should be able to loot currency on the existing and future ennemies in the game, grab them, drop it and use it in the Lab. Players can carry one type at a time among 4 planned types of currency (Fire, Water, Wind, Earth) like a tank/stack.
+
+#### Loot Component
+
+This Actor Component is a generic piece of code to loot/spawn anything. It is designed to be generic and not specific to currencies, that way future temas will be able to reuse it if needed. It provides a simple functionnality <span class="code">Loot</span> which owners of the component are responsible to call **server side**.
+
+Given a list of *loot entries*, a probality and a radius it simply spawns all actors around the owner.
+
+![Creep Units](/img/alka_loot_code.png)
+
+In our game, this component was placed inside the <span class="code">MasterEnnemy</span> class, and the <span class="code">Loot</span> was triggered on destroy of the Actor. This way, all existing and future ennemies could directly drop the currencies.
+
+#### Creep Unit
+
+A base <span class="code">CreepUnit</span> Actor was created to put inside the LootComponent. It contained all common behavior to all currencies (spawn on the ground, grabbed by the player, lifetime, ...) and then had been *subclassed* to create all creep unit types.
+
+The main thing to keep in mind here is that all *collisions* checks, *spawns*, *destroys*, and *changes* in the PlayerState (number of creep unit of each types) had to be done on the **server** and then be replicated to avoid cheating and ensure a good networking.
+
 ![Creep Units](/img/alka_cu.png)
 
-![Creep Unit class](/img/alka_cu_code.png)
+A debug tool was also programmed to let artists and designers spawn as many currencies as they wanted anywhere.
 
-### Integration into the Lab UI
+### Unreal Player State
+
+The PlayerState present in Unreal framework was largely used to keep track of each creep unit count, the current type carried and the maximum amount that can be carried.
+This is where each event occured when the current type or the stack count changed to update all concerned UI.
+This properties was replicated with *OnRepNotify* behavior of Unreal in C++ allowing to trigger events client side after replication.
+
+### Integration into the Lab UI and player HUD
+
+After adding this features, I had to integrate them into the already made UI of the lab and of the HUD.
+Thanks to all the events it was easy to sync the UI according to all players' state.
+
+First the Lab :
 
 ![Alchemy Lab](/img/alka_lab.png)
 
 ![Alchemy Lab UI](/img/alka_lab_ui.png)
+
+Then the creep unit stack HUD (with one color for each type) :
+
+![Alchemy Lab UI Fire](/img/alka_cu_ui_fire.png)
+
+![Alchemy Lab UI Wind](/img/alka_cu_ui_wind.png)
 
 ## Technical and Design challenges
 

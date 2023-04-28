@@ -18,6 +18,9 @@
 #content img {
   max-width: 100%;
   max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #content h2 {
@@ -36,4 +39,9 @@
   border-left: 4px solid silver;
   padding: 0;
   padding-left: 6px;
+}
+
+#content .code {
+  font-family: 'Lucida Console';
+  color: grey;
 }

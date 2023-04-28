@@ -78,11 +78,30 @@ We were in an every-day collaboration with the artists during the production pha
 <p>I spent the main part of the development working on the new system currency system <em>&quot;Creep Units&quot;</em> in tandem with the new store <em>&quot;Alchemy Lab&quot;</em>
 which will let players revive others and buy weapons and abilities.</p>
 <h3 id="currency-system">Currency system</h3>
+<p>A new featured was designed by our team during the prototyping phase. Players should be able to loot currency on the existing and future ennemies in the game, grab them, drop it and use it in the Lab. Players can carry one type at a time among 4 planned types of currency (Fire, Water, Wind, Earth) like a tank/stack.</p>
+<h4 id="loot-component">Loot Component</h4>
+<p>This Actor Component is a generic piece of code to loot/spawn anything. It is designed to be generic and not specific to currencies, that way future temas will be able to reuse it if needed. It provides a simple functionnality <span class="code">Loot</span> which owners of the component are responsible to call <strong>server side</strong>.</p>
+<p>Given a list of <em>loot entries</em>, a probality and a radius it simply spawns all actors around the owner.</p>
+<p><img src="/img/alka_loot_code.png" alt="Creep Units" /></p>
+<p>In our game, this component was placed inside the <span class="code">MasterEnnemy</span> class, and the <span class="code">Loot</span> was triggered on destroy of the Actor. This way, all existing and future ennemies could directly drop the currencies.</p>
+<h4 id="creep-unit">Creep Unit</h4>
+<p>A base <span class="code">CreepUnit</span> Actor was created to put inside the LootComponent. It contained all common behavior to all currencies (spawn on the ground, grabbed by the player, lifetime, ...) and then had been <em>subclassed</em> to create all creep unit types.</p>
+<p>The main thing to keep in mind here is that all <em>collisions</em> checks, <em>spawns</em>, <em>destroys</em>, and <em>changes</em> in the PlayerState (number of creep unit of each types) had to be done on the <strong>server</strong> and then be replicated to avoid cheating and ensure a good networking.</p>
 <p><img src="/img/alka_cu.png" alt="Creep Units" /></p>
-<p><img src="/img/alka_cu_code.png" alt="Creep Unit class" /></p>
-<h3 id="integration-into-the-lab-ui">Integration into the Lab UI</h3>
+<p>A debug tool was also programmed to let artists and designers spawn as many currencies as they wanted anywhere.</p>
+<h3 id="unreal-player-state">Unreal Player State</h3>
+<p>The PlayerState present in Unreal framework was largely used to keep track of each creep unit count, the current type carried and the maximum amount that can be carried.
+This is where each event occured when the current type or the stack count changed to update all concerned UI.
+This properties was replicated with <em>OnRepNotify</em> behavior of Unreal in C++ allowing to trigger events client side after replication.</p>
+<h3 id="integration-into-the-lab-ui-and-player-hud">Integration into the Lab UI and player HUD</h3>
+<p>After adding this features, I had to integrate them into the already made UI of the lab and of the HUD.
+Thanks to all the events it was easy to sync the UI according to all players' state.</p>
+<p>First the Lab :</p>
 <p><img src="/img/alka_lab.png" alt="Alchemy Lab" /></p>
 <p><img src="/img/alka_lab_ui.png" alt="Alchemy Lab UI" /></p>
+<p>Then the creep unit stack HUD (with one color for each type) :</p>
+<p><img src="/img/alka_cu_ui_fire.png" alt="Alchemy Lab UI Fire" /></p>
+<p><img src="/img/alka_cu_ui_wind.png" alt="Alchemy Lab UI Wind" /></p>
 <h2 id="technical-and-design-challenges">Technical and Design challenges</h2>
 <p>This project was full of challenges which allowed me to increase my skills!</p>
 <h3 id="online-multiplayer-game">Online multiplayer game</h3>
