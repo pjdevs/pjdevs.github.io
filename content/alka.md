@@ -24,6 +24,7 @@ We had an Agile workflow with Sprint Reviews and Build Reviews once a week and e
 
 ## My contribution to the project
 
+TODO...
 
 ## Technical and Design challenges
 
