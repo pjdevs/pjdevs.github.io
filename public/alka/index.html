@@ -64,22 +64,37 @@
     <h1>ALKA</h1>
     <p>A 3D online co-op PvE FPS made in collaboration with multiple universities in Québec</p>
     <div>
-      <iframe width="100%" height="500" src="https://www.youtube.com/embed/_pX1EpqLWC4" title="Alka" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/_pX1EpqLWC4" title="Alka" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <h2 id="description">Description</h2>
 <p>ALKA is an online multiplayer game where 2 to 4 players take control of armed drones whose duty is to eliminate an infection spreading in a bunger after the humanity has disappeared. They will have to destroyed nodes of infection which are protected by various enemies.</p>
 <h2 id="project-overview">Project overview</h2>
+<p>ALKA began its development during the winter 2022 semester. Students from UQAC, NAD-UQAC and UdeM started to develop the first prototype of the game.
+Then, our team continued the developement during fall, winter and spring 2022.
+<a href="https://uqac.itch.io/alka" target="_blank">See first prototype</a></p>
 <p>Our team worked on the project during two quarters. The first was a pre-production phase and the second a production phase.
 We were in an every-day collaboration with the artists during the production phase after some prototyping.</p>
-<p>We had an Agile workflow with Sprint Reviews and Build Reviews once a week and every two weeks. Moreover, tasks were distributed with tickets on a Kanban like board. Each task had <span style="color:gold">Gold</span>, <span style="color:silver">Silver</span>, <span style="color:maroon">Bronze</span> steps to validate a certain level of <em>polish</em>.</p>
+<p>We had an Agile workflow with Sprint Reviews and Build Reviews once a week and every two weeks. Moreover, tasks were distributed with tickets on a Kanban like board. Each task had <span style="color:gold">Gold</span>, <span style="color:silver">Silver</span>, <span style="color:maroon">Bronze</span> steps to validate a certain level of <em>polish</em> for each one.</p>
 <h2 id="my-contribution-to-the-project">My contribution to the project</h2>
-<p>TODO...</p>
+<p>I spent the main part of the development working on the new system currency system <em>&quot;Creep Units&quot;</em> in tandem with the new store <em>&quot;Alchemy Lab&quot;</em>
+which will let players revive others and buy weapons and abilities.</p>
+<h3 id="currency-system">Currency system</h3>
+<p><img src="/img/alka_cu.png" alt="Creep Units" /></p>
+<p><img src="/img/alka_cu_code.png" alt="Creep Unit class" /></p>
+<h3 id="integration-into-the-lab-ui">Integration into the Lab UI</h3>
+<p><img src="/img/alka_lab.png" alt="Alchemy Lab" /></p>
+<p><img src="/img/alka_lab_ui.png" alt="Alchemy Lab UI" /></p>
 <h2 id="technical-and-design-challenges">Technical and Design challenges</h2>
+<p>This project was full of challenges which allowed me to increase my skills!</p>
 <h3 id="online-multiplayer-game">Online multiplayer game</h3>
-<p>ALKA was my first online multiplayer game programming experience. As I could see, this increases the complexity of development, requiring several elements to be put in place for smooth and optimal functioning. Thus, I had to learn as I worked on the project, which proved to be quite a challenge but also very instructive. In the context of my AI work, it was particularly important that the actions of the various enemies were correctly reflected in the game instances of each player.</p>
-<h3 id="adaptation-to-a-project-already-started">Adaptation to a project already started</h3>
-<p>When I joined the team, the project was already well under way. Also, the vast majority of programmers who were on the project the previous semester were no longer there. So there was a certain period of adjusment where I had to analyze the code and the funcioning of the project in order to make additions and modifications.</p>
+<p>ALKA was my first multiplayer game programming experience and my first Unreal Engine project at the same time. I had to learn the basics of the engine in a short pre-production period to be ready and efficient during the production. Moreover, programming a multiplayer game increases the complexity of development. As a first time, it was a challenge to have the Client/Server/RPC mindset. This was very instructive and I learned various things on Unreal Engine and networking inside of it.</p>
+<p>In particular, as part of my work, I had to make sure that every spawning, dropping, inventory like states (how much currencies in the lab? how much on each player?) and events (my currency count changed, I dropped currencies inside the lab, ...) were properly replicated across all client and on the coherent one the server. Indeed, P2P was even harder because you have to keep in mind that the server is also a client/player.</p>
+<p>Eventually, I am now confident about getting involved in a new mutliplayer project if needed!</p>
+<h3 id="adaptation-to-a-project-already-started-with-a-new-team">Adaptation to a project already started with a new team</h3>
+<p>When we joined the team, the project was already in a decent state. Moreover, all programmers (except one) and artists were new to the project.
+This led to a certain adaptation time to a consequent C++ code base and to the Agile worlfow with this particular team.
+I had to analyze all part of the code (C++ and some Blueprints) to ensure I understood the code and I could  makes required changes without breaking any existing behavior.</p>
 <h3 id="collaboration-with-multiple-universities">Collaboration with multiple universities</h3>
-<p>Alka is a game developed in collaboration with 3 universities. This collaboration brings its share of challenges, such as the distance which leads in a less easy communication. Indeed, we had to learn how to communicate effectively and use teamwork tools such as Microsoft Teams to ensure good cohesion within the large team that we form. In short, I believe that communication was one of our greatest strengths in the project.</p>
+<p>ALKA is a game developed in collaboration with 3 universities (programmers, artists/designers, sound designers). This collaboration brings couple difficulties, such as the distance which leads in a less easy communication. The team managed to communicate efficiently but it is always harder to share ideas an opinions this way than in a face-to-face meeting.</p>
 <h2 id="credits">Credits</h2>
 <h4 id="supervisors">Supervisors</h4>
 <ul>

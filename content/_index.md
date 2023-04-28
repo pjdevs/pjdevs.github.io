@@ -1,7 +1,7 @@
 +++
 +++
 
-<span style="color:red">***WARNING: this website is under construction !***</span>
+<span style="color:red">***WARNING: some parts of this website are still under construction!***</span>
 
 # About me
 
