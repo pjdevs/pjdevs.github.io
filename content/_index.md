@@ -5,7 +5,7 @@
 
 # About me
 
-**Graphics and game programming** enthusiast. I am working part time at <a href="https://folksvfx.com" target="_blank">FOLKS VFX</a> as a pipeline developer and a future intern in game programming at <a href="https://www.illogika.com" target="_blank">iLLOGIKA</a> for the end of 2023!
+**Graphics and game programming** enthusiast. I am currently working full time at <a href="https://www.illogika.com" target="_blank">iLLOGIKA</a> as a game programmer.
 
 ## Education
 
