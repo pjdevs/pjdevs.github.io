@@ -11,7 +11,7 @@
 
 I studied computer science and engineering at <a href="https://enseirb-matmeca.bordeaux-inp.fr/" target="_blank">ENSEIRB-MATMECA, Talence, France</a> 2018-2023 to get a Master's degree.
 
-I am studying game programming <a href="https://uqac.ca/" target="_blank">UQAC, Chicoutimi, Québec, Canada</a> 2022-2023 to get a Master's degree.
+I studied game programming <a href="https://uqac.ca/" target="_blank">UQAC, Chicoutimi, Québec, Canada</a> 2022-2023 to also get a Master's degree.
 
 ## Interests
 
